@@ -5,7 +5,7 @@ package com.ruanko.music.model;
  */
 public class Album {
 	
-	private int id;            //主键id
+	private int alb_id;            //主键id
 	private int art_id;        //艺人id
 	
 	private String name;       //专辑名
@@ -18,7 +18,7 @@ public class Album {
 	private int del; //删除标记(0-未删除;1-已删除)
 
 	public Album(){
-		this.id = 0;
+		this.alb_id = 0;
 		this.art_id = 0;
 		this.name = "";
 		this.publishdate = "";
@@ -30,7 +30,7 @@ public class Album {
 	}
 	
 	public void setAttributes(int id_, int art_id_,String name_,String pd_,String image1_, String image2_,String com_,String dsp_){
-		this.id = id_;
+		this.alb_id = id_;
 		this.art_id = art_id_;
 		this.name = name_;
 		this.publishdate = pd_;
@@ -41,12 +41,12 @@ public class Album {
 	}
 
 	//Generated setters and getters
-	public int getId() {
-		return id;
+	public int getAlbId() {
+		return alb_id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setAlbId(int alb_id) {
+		this.alb_id = alb_id;
 	}
 
 	public int getArt_id() {

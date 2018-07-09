@@ -5,10 +5,12 @@ package com.ruanko.music.model;
  */
 public class Music {
 
-	private int id;                  //主键id
+	private int mus_id;                  //主键id
 	private int art_id;              //艺人id
 	private int alb_id;              //专辑id
-	private int[] tag = new int[3];  //标签id
+	private int tag1;  //标签id1
+	private int tag2;  //标签id1
+	private int tag3;  //标签id1
 	
 	private String name;        //歌名  
 	private String realname;
@@ -22,10 +24,12 @@ public class Music {
 	
 	public Music(){
 		int[] tag_ = {0,0,0};
-		this.id = 0;
+		this.mus_id = 0;
 		this.art_id = 0;
 		this.alb_id = 0;
-		this.tag = tag_;
+		this.tag1 = 0;
+		this.tag2 = 0;
+		this.tag3 = 0;
 		this.name = "";
 		this.realname = "";
 		this.lrc = "";
@@ -35,11 +39,13 @@ public class Music {
 		this.del = 0;
 	}
 
-	public void setAttributes(int id_,int art_id_,int alb_id_,int[] tag_,String name_,String rn_,String lrc_,String zone_, String pd_,String url_){
-		this.id = id_;
+	public void setAttributes(int id_,int art_id_,int alb_id_,int tag1_,int tag2_,int tag3_,String name_,String rn_,String lrc_,String zone_, String pd_,String url_){
+		this.mus_id = id_;
 		this.art_id = art_id_;
 		this.alb_id = alb_id_;
-		this.tag = tag_;
+		this.tag1 = tag1_;
+		this.tag2 = tag2_;
+		this.tag3 = tag3_;
 		this.name = name_;
 		this.realname = rn_;
 		this.lrc = lrc_;
@@ -49,36 +55,36 @@ public class Music {
 	}
 	
 	public int getTag1(){
-		return tag[0];
+		return tag1;
 	}
 	
 	public void setTag1(int tag1){
-		this.tag[0] = tag1;
+		this.tag1 = tag1;
 	}
 	
 	public int getTag2(){
-		return tag[1];
+		return tag2;
 	}
 	
 	public void setTag2(int tag2){
-		this.tag[1] = tag2;
+		this.tag2 = tag2;
 	}
 	
 	public int getTag3(){
-		return tag[2];
+		return tag3;
 	}
 	
 	public void setTag3(int tag3){
-		this.tag[2] = tag3;
+		this.tag3 = tag3;
 	}
 	
 	//Generated setters and getters
-	public int getId() {
-		return id;
+	public int getMusId() {
+		return mus_id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setId(int mus_id) {
+		this.mus_id = mus_id;
 	}
 
 	public int getArt_id() {
@@ -95,14 +101,6 @@ public class Music {
 
 	public void setAlb_id(int alb_id) {
 		this.alb_id = alb_id;
-	}
-
-	public int[] getTag() {
-		return tag;
-	}
-
-	public void setTag(int[] tag) {
-		this.tag = tag;
 	}
 
 	public String getName() {

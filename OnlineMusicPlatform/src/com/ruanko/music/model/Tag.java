@@ -5,7 +5,7 @@ package com.ruanko.music.model;
  */
 public class Tag {
 
-	private int id;  //主键id
+	private int tag_id;  //主键id
 	
 	private String tagname;      //标签名
 	private String description;  //标签描述
@@ -13,19 +13,19 @@ public class Tag {
 	private int del;  //删除标记(0-未删除;1-已删除)
 	
 	public Tag(){
-		this.id = 0;
+		this.tag_id = 0;
 		this.tagname = "";
 		this.description = "";
 		this.del = 0;
 	}
 
 	//Generated setters and getters
-	public int getId() {
-		return id;
+	public int getTagId() {
+		return tag_id;
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.tag_id = id;
 	}
 
 	public String getTagname() {
